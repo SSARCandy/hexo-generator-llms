@@ -46,6 +46,11 @@ and injects into each page's `<head>`:
 - Records which pages got a `.md` and injects the `alternate` link only on those, by reading
   each page's own `<link rel="canonical">` inside an `after_render:html` filter — **no theme
   edits required**.
+- Only emits for pages that resolve to an **HTML document** (path ends in `/` or `.htm(l)`).
+  Files Hexo copies verbatim but still lists as pages — `sw.js`, `web-app-manifest.json`, a raw
+  `feed.xml`, any data JSON in your source root — are skipped automatically: converting them to
+  Markdown is meaningless, and emitting `<asset>/index.md` would make Hexo create a directory
+  that collides with the asset file of the same name.
 
 ### Themes without a canonical link
 
