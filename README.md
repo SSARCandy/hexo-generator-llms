@@ -1,8 +1,7 @@
 # hexo-generator-llms
 
 [![npm version](https://img.shields.io/npm/v/hexo-generator-llms.svg)](https://www.npmjs.com/package/hexo-generator-llms)
-[![npm downloads](https://img.shields.io/npm/dm/hexo-generator-llms.svg)](https://www.npmjs.com/package/hexo-generator-llms)
-[![license](https://img.shields.io/npm/l/hexo-generator-llms.svg)](./LICENSE)
+[![GitHub License](https://img.shields.io/github/license/ssarcandy/hexo-generator-llms)](./LICENSE)
 
 **GEO (Generative Engine Optimization) for Hexo.**
 
@@ -74,19 +73,13 @@ llms:
   llms_txt: true          # /llms.txt index
   llms_full_txt: false    # /llms-full.txt (all bodies concatenated)
   alternate_link: true    # inject <link rel="alternate"> into <head>
-  front_matter: true       # YAML header (title/source/date/tags) in each .md
-  absolute_urls: true      # rewrite links/images to absolute URLs
+  front_matter: true      # YAML header (title/source/date/tags) in each .md
+  absolute_urls: true     # rewrite links/images to absolute URLs
 ```
 
 Data-driven pages (e.g. a portfolio or gallery whose content is rendered from a template/data
 file rather than a Markdown body) have no meaningful body to convert — list their paths in
 `exclude` to skip them.
-
-## Note on GitHub Pages
-
-GitHub Pages can't set a custom `Content-Type` on `.md` files, but AI crawlers discover the
-Markdown via the `rel="alternate"` hint, the `.md` extension, and `llms.txt` — not the response
-MIME type — so it works regardless.
 
 ## License
 
