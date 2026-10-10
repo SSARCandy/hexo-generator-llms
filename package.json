@@ -31,6 +31,9 @@
     "ai-crawlers",
     "seo"
   ],
+  "scripts": {
+    "test": "node --test"
+  },
   "engines": {
     "node": ">=18"
   },
